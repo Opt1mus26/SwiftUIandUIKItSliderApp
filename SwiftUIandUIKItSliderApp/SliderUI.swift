@@ -10,23 +10,24 @@ import SwiftUI
 struct SliderUI: UIViewRepresentable {
     
     @Binding var currentValue: Double
-    @State private var alphaValue = CGFloat.random(in: 0...1)
+    
+    let color: UIColor
+    let alpha: Int
     
     func makeUIView(context: Context) -> UISlider {
         let slider = UISlider(frame: .zero)
         slider.minimumValue = 0
         slider.maximumValue = 100
-        slider.thumbTintColor = .red
         slider.addTarget(
             context.coordinator,
             action: #selector(Coordinator.changeValue),
             for: .valueChanged
         )
-        
         return slider
     }
     
     func updateUIView(_ uiView: UISlider, context: Context) {
+        uiView.thumbTintColor = color.withAlphaComponent(CGFloat(alpha) / 100)
         uiView.value = Float(currentValue)
         
     }
@@ -52,7 +53,7 @@ extension SliderUI {
 
 struct SliderUI_Previews: PreviewProvider {
     static var previews: some View {
-        SliderUI(currentValue: .constant(50))
+        SliderUI(currentValue: .constant(50), color: .blue, alpha: 100)
     }
 }
 

@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUIandUIKItSliderAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(currentValue: 100)
+            ContentView()
         }
     }
 }

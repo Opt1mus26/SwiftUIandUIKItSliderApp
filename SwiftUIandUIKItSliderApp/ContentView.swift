@@ -9,20 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var currentValue: Double
-    @State private var textValue = ""
+    @State private var currentValue = 10.0
     @State private var targetValue = Int.random(in: 0...100)
     @State private var showAlert = false
-   
-    
+
     var body: some View {
         VStack {
             Text("Подвиньте слайдер? как можно ближе к: \(targetValue)")
             HStack {
                 Text("0")
-                SliderUI(currentValue: $currentValue)
-                    .onChange(of: currentValue) { newValue in
-                        textValue = "\(lround(currentValue))"
+                SliderUI(currentValue: $currentValue,
+                         color: .red,
+                alpha: computeScore())
                     }
                 Text("100")
             }
@@ -40,11 +38,6 @@ struct ContentView: View {
                 changeValue()
             }
         }
-        .onAppear {
-            textValue = "\(lround(currentValue))"
-        }
-        .padding()
-    }
     
     private func changeValue() {
         let newValue = Int.random(in: 0...100)
@@ -59,6 +52,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(currentValue: 50)
+        ContentView()
     }
 }
