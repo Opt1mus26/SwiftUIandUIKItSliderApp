@@ -11,6 +11,7 @@
 		EF07769C27A8393400EE19F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF07769B27A8393400EE19F9 /* ContentView.swift */; };
 		EF07769E27A8393800EE19F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF07769D27A8393800EE19F9 /* Assets.xcassets */; };
 		EF0776A127A8393800EE19F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF0776A027A8393800EE19F9 /* Preview Assets.xcassets */; };
+		EF0776A827A8417600EE19F9 /* SliderUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0776A727A8417600EE19F9 /* SliderUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		EF07769B27A8393400EE19F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EF07769D27A8393800EE19F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF0776A027A8393800EE19F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EF0776A727A8417600EE19F9 /* SliderUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				EF07769927A8393400EE19F9 /* SwiftUIandUIKItSliderAppApp.swift */,
 				EF07769B27A8393400EE19F9 /* ContentView.swift */,
+				EF0776A727A8417600EE19F9 /* SliderUI.swift */,
 				EF07769D27A8393800EE19F9 /* Assets.xcassets */,
 				EF07769F27A8393800EE19F9 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF0776A827A8417600EE19F9 /* SliderUI.swift in Sources */,
 				EF07769C27A8393400EE19F9 /* ContentView.swift in Sources */,
 				EF07769A27A8393400EE19F9 /* SwiftUIandUIKItSliderAppApp.swift in Sources */,
 			);
